@@ -3,6 +3,10 @@ package com.games.centurion;
 import javax.swing.*;
 import javax.xml.stream.FactoryConfigurationError;
 import java.awt.*;
+import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBuffer;
+import java.awt.image.DataBufferInt;
 import java.util.TreeMap;
 
 public class Game extends Canvas implements Runnable {
@@ -20,12 +24,20 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     private JFrame frame;
     private Boolean running = false;
+    //creating a screen oblject from our screen class
+
+    private Screen screen;
+    //most important shit
+    private BufferedImage image = new BufferedImage(width,height,BufferedImage.TYPE_INT_RGB);
+    //getting the raster, by typecasting the raster of the image into a DataBufferInt
+    private int[] pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
+
     //creating a constructor for Game class
     public Game(){
         //creating dimension from superclass Canvas
         Dimension size = new Dimension(width*scale,height*scale);
         setPreferredSize(size);
-
+        screen = new Screen(width,height);//sets the height in the screen class
         frame = new JFrame();
 
     }
@@ -46,8 +58,33 @@ public class Game extends Canvas implements Runnable {
 //this is the game loop that keeps our program running
     public void run(){
         while (running){
-            System.out.println("Running");
+            update();// updates game logic to keep consistant pace
+            render();// renders the game on the screen
         }
+    }
+    public void update(){
+
+    }
+    public void render(){
+        // creating a buffer strategy, buffer of 2/3 frames???
+        BufferStrategy bs = getBufferStrategy();
+        if (bs == null){// incase the bs doesnt exist
+            createBufferStrategy(3);
+            return;
+        }
+        screen.clear();
+        screen.render();
+        for (int i=0;i<pixels.length;i++){
+            pixels[i] = screen.pixels[i];
+        }
+        //drawing graphics on the screen
+        Graphics g = bs.getDrawGraphics();
+        //this is where we write all of our graphics
+        g.drawImage(image,0,0,getWidth(),getHeight(),null);
+        // end of graphics display
+        //need to dispose of your graphics to release system resources, really important to run this at the end
+        g.dispose();
+        bs.show();
     }
 
     //setting our main method
