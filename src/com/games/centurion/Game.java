@@ -20,7 +20,7 @@ public class Game extends Canvas implements Runnable {
     public static int width = 300;
     public static int height = width/16*9;
     public static int scale = 3;
-
+    public static String title = "Rain";
     private Thread thread;
     private JFrame frame;
     private Boolean running = false;
@@ -57,9 +57,31 @@ public class Game extends Canvas implements Runnable {
     }
 //this is the game loop that keeps our program running
     public void run(){
+        //setting up last time for timer
+        long lastTime = System.nanoTime();
+        long timer = System.currentTimeMillis();
+        final double ns = 1000000000.0/60.0;
+        double delta = 0;
+        int frames = 0;
+        int updates = 0;
         while (running){
-            update();// updates game logic to keep consistant pace
+            long now = System.nanoTime();
+            delta += (now-lastTime)/ns;//setting up timer so delta is only >=1 60 times a second, which is our update cap
+            lastTime = now;
+            while(delta>=1){
+                update();// updates game logic to keep consistant pace
+                updates++;
+                delta--;
+            }
             render();// renders the game on the screen
+            frames++;
+            if (System.currentTimeMillis() - timer > 1000){
+                timer += 1000;
+                System.out.println(updates + "ups" + frames +"fps");
+                frame.setTitle(title+"  |  "+frames);
+                updates = 0;
+                frames = 0;
+            }
         }
     }
     public void update(){
@@ -73,7 +95,7 @@ public class Game extends Canvas implements Runnable {
             return;
         }
         screen.clear();
-        screen.render();
+        screen.render(0,0);
         for (int i=0;i<pixels.length;i++){
             pixels[i] = screen.pixels[i];
         }
@@ -94,7 +116,7 @@ public class Game extends Canvas implements Runnable {
         //always set this to false
         game.frame.setResizable(false);
         //sets title
-        game.frame.setTitle("Rain");
+        game.frame.setTitle(Game.title);
         //adds the game to the canvas
         game.frame.add(game);
         //packs the JFrame
