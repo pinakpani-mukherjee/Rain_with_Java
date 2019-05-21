@@ -1,13 +1,12 @@
-package com.games.centurion;
+package com.games.rain;
+
+import com.games.rain.input.Keyboard;
 
 import javax.swing.*;
-import javax.xml.stream.FactoryConfigurationError;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBuffer;
 import java.awt.image.DataBufferInt;
-import java.util.TreeMap;
 
 public class Game extends Canvas implements Runnable {
     //setting the basic dimensions of the game. Very important to set this in the beginning to avoid graphical errors
@@ -23,6 +22,7 @@ public class Game extends Canvas implements Runnable {
     public static String title = "Rain";
     private Thread thread;
     private JFrame frame;
+    private Keyboard key;
     private Boolean running = false;
     //creating a screen oblject from our screen class
 
@@ -39,7 +39,9 @@ public class Game extends Canvas implements Runnable {
         setPreferredSize(size);
         screen = new Screen(width,height);//sets the height in the screen class
         frame = new JFrame();
+        key = new Keyboard();
 
+        addKeyListener(key);//add keyListner after you have set key, or else you get a null ptr execption
     }
 
     public synchronized void start(){//this is the start method to start the game thread
@@ -77,7 +79,6 @@ public class Game extends Canvas implements Runnable {
             frames++;
             if (System.currentTimeMillis() - timer > 1000){
                 timer += 1000;
-                System.out.println(updates + "ups" + frames +"fps");
                 frame.setTitle(title+"  |  "+frames);
                 updates = 0;
                 frames = 0;
@@ -85,7 +86,7 @@ public class Game extends Canvas implements Runnable {
         }
     }
     public void update(){
-
+        key.update();
     }
     public void render(){
         // creating a buffer strategy, buffer of 2/3 frames???

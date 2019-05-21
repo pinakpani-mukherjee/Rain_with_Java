@@ -1,6 +1,5 @@
-package com.games.centurion;
+package com.games.rain;
 
-import java.awt.*;
 import java.util.Random;
 
 public class Screen {
