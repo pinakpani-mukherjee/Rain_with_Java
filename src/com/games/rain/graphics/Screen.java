@@ -1,4 +1,4 @@
-package com.games.rain;
+package com.games.rain.graphics;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ public class Screen {
     private int width;
     private int height;
     public int[] pixels;
-    public int MAP_SIZE = 16;
+    public int MAP_SIZE = 64;
     public int MAP_SIZE_MASK = MAP_SIZE -1;
     public int[] tiles = new int[MAP_SIZE*MAP_SIZE];//64*64 tiles, total of 4096 tiles
 
@@ -28,14 +28,13 @@ public class Screen {
     //creating render function for screen
     public void render(int xOffset, int yOffset){    //rendering pixel by pixel,left to right, from top to bottom
         for (int y = 0;y<height;y++){
-            int yy = y+yOffset;
-            if (yy<0||yy>=height) break;
+            int yp = y+yOffset;
+            if(yp<0||yp>=height) continue;
             for (int x = 0;x<width;x++){
-                int xx = x+xOffset;
-                if(xx<0||xx>=width) break;
-                int tileIndex = ((xx>>4)&MAP_SIZE_MASK)+((yy>>4)&MAP_SIZE_MASK)*MAP_SIZE;//setting tile at 16*16 size, use bitwise operators
+                int xp = x+xOffset;
+                if(xp<0||xp>=width) continue;
 
-                pixels[x+y*width] = tiles[tileIndex];
+                pixels[xp+yp*width] = Sprite.grass.pixels[(x&15) + (y&15)*Sprite.grass.SIZE];
             }
         }
     }
