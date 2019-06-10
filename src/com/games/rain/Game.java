@@ -2,6 +2,9 @@ package com.games.rain;
 
 import com.games.rain.input.Keyboard;
 import com.games.rain.graphics.Screen;
+import com.games.rain.level.Level;
+import com.games.rain.level.RandomLevel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferStrategy;
@@ -23,6 +26,7 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     private JFrame frame;
     private Keyboard key;
+    private Level level;
     private Boolean running = false;
     //creating a screen oblject from our screen class
 
@@ -40,6 +44,7 @@ public class Game extends Canvas implements Runnable {
         screen = new Screen(width,height);//sets the height in the screen class
         frame = new JFrame();
         key = new Keyboard();
+        level = new RandomLevel(64,64);
 
         addKeyListener(key);//add keyListner after you have set key, or else you get a null ptr execption
     }
@@ -104,8 +109,8 @@ public class Game extends Canvas implements Runnable {
             return;
         }
         screen.clear();
-        screen.render(x,y);
-        for (int i=0;i<pixels.length;i++){
+        level.render(x,y,screen);
+        for (int i = 0; i < pixels.length; i++) {
             pixels[i] = screen.pixels[i];
         }
         //drawing graphics on the screen

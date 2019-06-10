@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ebca1c1-3174-439b-aa56-dbced334e82f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/res.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/graphics/SpriteSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/level/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/games/rain/level/tile/VoidTile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game_with_Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Game_with_Java.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/games/rain/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/games/rain/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/games/rain/input/Keyboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/input/Keyboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/level/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/level/Level.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+            <state relative-caret-position="-8">
+              <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,11 +39,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="199">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding>
-                <element signature="e#324#325#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,27 +51,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+            <state relative-caret-position="60">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
               <folding>
-                <element signature="e#118#119#0" expanded="true" />
-                <element signature="e#154#155#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/VoidTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            <state relative-caret-position="170">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#207#208#0" expanded="true" />
-                <element signature="e#334#335#0" expanded="true" />
-                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#148#149#0" expanded="true" />
+                <element signature="e#177#178#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -84,24 +88,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="136">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#150#151#0" expanded="true" />
-                <element signature="e#179#180#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/SpriteSheet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,17 +102,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+            <state relative-caret-position="85">
+              <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+            <state relative-caret-position="233">
+              <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,20 +156,21 @@
         <option value="$PROJECT_DIR$/src/com/games/rain/input/Keyboard.java" />
         <option value="$PROJECT_DIR$/src/com/games/rain/Screen.java" />
         <option value="$PROJECT_DIR$/src/com/games/rain/graphics/SpriteSheet.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/Game.java" />
         <option value="$PROJECT_DIR$/src/com/games/rain/level/Randomlevel.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/level/Level.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java" />
-        <option value="$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java" />
         <option value="$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/level/tile/VoidTile.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/level/Level.java" />
+        <option value="$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="138" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="20" />
+    <option name="y" value="40" />
     <option name="width" value="1346" />
     <option name="height" value="698" />
   </component>
@@ -183,8 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,6 +202,13 @@
               <item name="Rain_with_Java" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="rain" type="462c0819:PsiDirectoryNode" />
+              <item name="graphics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Rain_with_Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Rain_with_Java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="rain" type="462c0819:PsiDirectoryNode" />
               <item name="level" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -222,6 +223,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,10 +328,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-568" y="179" width="1346" height="698" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2807154" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27760968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -337,7 +340,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36106196" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36070853" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -401,16 +404,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="added key listener" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/SpriteSheet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/games/rain/input/Keyboard.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -421,74 +414,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/games/rain/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        <state relative-caret-position="-8">
+          <caret line="100" column="27" lean-forward="true" selection-start-line="100" selection-start-column="27" selection-end-line="100" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/Level.java">
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/SpriteSheet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="153">
+          <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
           <folding>
-            <element signature="e#324#325#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/RandomLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
+        <state relative-caret-position="60">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
           <folding>
-            <element signature="e#118#119#0" expanded="true" />
-            <element signature="e#154#155#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/VoidTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#148#149#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/Sprite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="9" column="62" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/GrassTile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        <state relative-caret-position="199">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#179#180#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/games/rain/level/tile/Tile.java">
+    <entry file="file://$PROJECT_DIR$/src/com/games/rain/graphics/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+        <state relative-caret-position="233">
+          <caret line="40" column="50" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#361#362#0" expanded="true" />
           </folding>
         </state>
       </provider>
